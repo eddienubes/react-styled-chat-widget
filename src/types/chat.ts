@@ -1,5 +1,3 @@
-import React, {SetStateAction} from "react";
-
 export type Corners = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
 
 export type Coordinates = { x: number, y: number };
@@ -57,5 +55,7 @@ export interface IChatWidget {
   placeHolder?: string
   greeting?: string,
   sendButton?: JSX.Element,
-
+  backgroundClassName?: string,
+  inputContainerClassName?: string,
+  buttonClassName?:string,
 }

@@ -28,7 +28,10 @@ interface IProps {
   onStartHandler: DraggableEventHandler,
   placeholder?: string,
   greeting?: string,
-  sendButton?: JSX.Element
+  sendButton?: JSX.Element,
+  backgroundClassName?: string,
+  inputContainerClassName?: string,
+  buttonClassName?:string,
 }
 
 const Chat: FC<IProps> = (
@@ -56,7 +59,10 @@ const Chat: FC<IProps> = (
     onStartHandler,
     placeholder,
     greeting,
-    sendButton
+    sendButton,
+    backgroundClassName,
+    buttonClassName,
+    inputContainerClassName
   }) => {
   const draggableRef = React.useRef<HTMLDivElement>(null);
 
@@ -74,7 +80,7 @@ const Chat: FC<IProps> = (
         onDrag={onDrag}
         onStart={onStartHandler}
       >
-        <div onClick={() => !isDraggable ? setOpen(!open) : null} ref={draggableRef} className="chat-button-wrapper handle" style={{
+        <div onClick={() => !isDraggable ? setOpen(!open) : null} ref={draggableRef} className={`chat-button-wrapper handle ${buttonClassName}`} style={{
           transition: !dragging ? '.3s ease-in-out' : 'none',
           width: size + 'vw',
           height: size + 'vw',
@@ -85,6 +91,8 @@ const Chat: FC<IProps> = (
         </div>
       </Draggable>
       <ChatMainContent
+        backgroundClassName={backgroundClassName}
+        inputContainerClassName={inputContainerClassName}
         sendButton={sendButton}
         placeholder={placeholder}
         greeting={greeting}

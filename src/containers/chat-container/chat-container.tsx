@@ -22,7 +22,10 @@ const ChatContainer: FC<IChatWidget> = (
     spinner,
     placeHolder,
     greeting,
-    sendButton
+    sendButton,
+    backgroundClassName,
+    buttonClassName,
+    inputContainerClassName
   }
 ) => {
   const currentButtonSize = useMemo(() => {
@@ -132,11 +135,14 @@ const ChatContainer: FC<IChatWidget> = (
   }
 
   const onDragHandler: DraggableEventHandler = (event, data) => {
-      setDragging(true);
+    setDragging(true);
   }
 
   const setInitialChatPosition = useCallback(
-    () => setChatPosition(window.innerWidth <= 400 ? {x: 0, y: (window.innerWidth / 2)} : calculateChatPosition(defaultPosition)),
+    () => setChatPosition(window.innerWidth <= 400 ? {
+      x: 0,
+      y: (window.innerWidth / 2)
+    } : calculateChatPosition(defaultPosition)),
     [calculateChatPosition, defaultPosition]);
 
   const onStartHandler: DraggableEventHandler = (event, data) => {
@@ -169,6 +175,9 @@ const ChatContainer: FC<IChatWidget> = (
         setInitialChatPosition={setInitialChatPosition}
         isDraggable={isDraggable}
         setOpen={setOpen}
+        backgroundClassName={backgroundClassName}
+        buttonClassName={buttonClassName}
+        inputContainerClassName={inputContainerClassName}
       >
         {children}
       </Chat>

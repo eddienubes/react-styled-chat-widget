@@ -37,7 +37,9 @@ interface IProps {
   spinner?: JSX.Element,
   placeholder?: string,
   greeting?: string,
-  sendButton?: JSX.Element
+  sendButton?: JSX.Element,
+  backgroundClassName?: string,
+  inputContainerClassName?: string,
 }
 
 const ChatMainContent: FC<IProps> = (
@@ -57,7 +59,9 @@ const ChatMainContent: FC<IProps> = (
     spinner,
     greeting,
     placeholder,
-    sendButton
+    sendButton,
+    backgroundClassName,
+    inputContainerClassName
   }) => {
   const [message, setMessage] = useState<string>('');
   const formRef = useRef<HTMLFormElement>(null);
@@ -112,7 +116,7 @@ const ChatMainContent: FC<IProps> = (
       <MainContentWrapper>
         {children}
         <MessagesReverseContainer>
-          <MessagesContainer empty={messages.length === 0} ref={scrollRef}>
+          <MessagesContainer empty={messages.length === 0} ref={scrollRef} className={backgroundClassName}>
             {loading && spinner}
             {messages.length === 0 && !loading ?
               <DefaultMessage>{greeting || 'Feel free to ask anything you want to!'}</DefaultMessage> : null}
@@ -132,7 +136,7 @@ const ChatMainContent: FC<IProps> = (
         </MessagesReverseContainer>
         {
           !loading &&
-          <InputContainer>
+          <InputContainer className={inputContainerClassName}>
               <form ref={formRef} onSubmit={onSubmitHandler} onKeyDown={onKeyDownHandler}>
                   <textarea
                       name="message"
