@@ -32,7 +32,7 @@ interface IProps {
   onMessageSend?: MessageSendHandler
   messages: IMessage[],
   loading?: boolean,
-  setInitialChatPosition: Function,
+  setInitialChatPosition: () => void,
   height: number,
   spinner?: JSX.Element,
   placeholder?: string,

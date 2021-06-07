@@ -1,5 +1,5 @@
-import {ChatContainer as ChatWidget} from "../components/chat-main-content/chat-main-content.styles";
-import {Message, MessageSendHandler, SendClickHandler} from "../types/chat";
+import ChatWidget from "./containers/chat-container";
+import {Message, MessageSendHandler, SendClickHandler} from "./types/chat";
 
 export type {
   Message,

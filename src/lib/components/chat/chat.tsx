@@ -20,7 +20,7 @@ interface IProps {
   loading?: boolean,
   size: number,
   minSize: number,
-  setInitialChatPosition: Function,
+  setInitialChatPosition: () => void,
   height: number,
   isDraggable: boolean,
   setOpen: React.Dispatch<React.SetStateAction<boolean>>,

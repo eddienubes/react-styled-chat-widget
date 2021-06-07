@@ -1,11 +1,13 @@
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {AppWrapper, GlobalStyles} from './App.styles';
+import io from "socket.io-client";
 
 import styled from "styled-components";
-import ChatContainer from "./containers/chat-container";
-import {Message, MessageSendHandler, SendClickHandler} from "./types/chat";
-import socket from "./config/socket";
-import Spinner from "./components/spinner";
+import ChatWidget from "./lib/containers/chat-container";
+import {Message, MessageSendHandler, SendClickHandler} from "./lib";
+import Spinner from "./lib/components/spinner";
+
+const socket = io(process.env.REACT_APP_BACKEND_URL!);
 
 const Header = styled.div`
   background: ${props => props.theme.primary};
@@ -98,7 +100,7 @@ const App = () => {
   return (
     <AppWrapper>
       <GlobalStyles/>
-      <ChatContainer
+      <ChatWidget
         defaultPosition={'bottomRight'}
         messages={messages}
         loading={loading}
@@ -111,7 +113,7 @@ const App = () => {
           <hr/>
           <p>Here you can chat directly with me. I usually answer in a few minutes.</p>
         </Header>
-      </ChatContainer>
+      </ChatWidget>
     </AppWrapper>
   );
 }
