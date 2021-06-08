@@ -1,8 +1,25 @@
 {
   "name": "react-styled-chat-widget",
-  "version": "0.0.1",
-  "main": "index.js",
+  "version": "0.0.2",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "files": [
+    "build",
+    "README.md"
+  ],
   "license": "MIT",
+  "private": false,
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "chat",
+    "chat-widget",
+    "widget",
+    "socket",
+    "ui-lib",
+    "lib"
+  ],
   "scripts": {
     "start": "webpack serve --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js",
@@ -10,14 +27,16 @@
   },
   "author": "eddienubes",
   "description": "Flexibly styled chat-widget for your react apps. It was mainly created for integration with chat-bot messengers.",
+  "peerDependencies": {
+    "react": ">= 16.3.0",
+    "react-dom": ">= 16.3.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "core-js": "^3.13.1",
     "normalize.css": "^8.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-draggable": "^4.4.3",
     "styled-components": "^5.3.0"
   },
@@ -57,5 +76,9 @@
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "repository": {
+    "url": "https://github.com/eddienubes/react-styled-chat-widget",
+    "type": "git"
   }
 }
