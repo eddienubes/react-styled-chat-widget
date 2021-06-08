@@ -1,6 +1,6 @@
 {
   "name": "react-styled-chat-widget",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "build/index.js",
   "module": "build/index.js",
   "files": [
