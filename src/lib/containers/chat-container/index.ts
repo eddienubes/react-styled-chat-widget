@@ -1,3 +1,3 @@
-import ChatContainer from "./chat-container";
+import ChatWidget from "./chat-container";
 
-export default ChatContainer;
+export default ChatWidget;

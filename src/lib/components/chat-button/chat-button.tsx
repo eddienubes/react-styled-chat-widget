@@ -1,7 +1,8 @@
 import React, {FC, useEffect, useState} from 'react';
 import {IconContainer, Wrapper, Circle} from "./chat-button.styles";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faTimes} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 interface IProps {
   open: boolean,

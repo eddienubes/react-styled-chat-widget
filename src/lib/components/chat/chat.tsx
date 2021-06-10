@@ -2,7 +2,7 @@ import React, {FC, RefObject} from 'react';
 import ChatButton from "../chat-button";
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 import ChatMainContent from "../chat-main-content";
-import {Message, MessageSendHandler} from "../../types/chat";
+import {Message, MessageSendHandler} from "../../types/chat.types";
 import './chat.css';
 
 interface IProps {
@@ -20,7 +20,7 @@ interface IProps {
   loading?: boolean,
   size: number,
   minSize: number,
-  setInitialChatPosition: () => void,
+  setInitialChatPosition: Function,
   height: number,
   isDraggable: boolean,
   setOpen: React.Dispatch<React.SetStateAction<boolean>>,

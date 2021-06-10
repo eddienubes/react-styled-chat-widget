@@ -93,7 +93,8 @@ const PlaceHolderButton = styled.button`
   background: none;
   line-height: 10px;
   vertical-align: middle;
-
+  font-size: 1.5rem;
+  
   &:hover {
     transform: scale(1.1);
   }
@@ -127,6 +128,8 @@ const InputContainer = styled.div`
     margin: 0;
     border: none;
     background: ${props => props.theme.secondary};
+    font-size: inherit;
+    font-family: inherit;
     
     &::-webkit-scrollbar {
       width: 5px;

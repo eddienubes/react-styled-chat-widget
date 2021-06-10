@@ -1,7 +1,7 @@
 import React, {FC, useCallback, useMemo, useRef, useState} from 'react';
 import Chat from "../../components/chat";
 import {DraggableData, DraggableEventHandler} from "react-draggable";
-import {Coordinates, Corners, DefaultPosition, IChatWidget, Distances} from "../../types/chat";
+import {Coordinates, Corners, DefaultPosition, IChatWidget, Distances} from "../../types/chat.types";
 import {ThemeProvider, DefaultTheme} from "styled-components";
 
 const ChatContainer: FC<IChatWidget> = (

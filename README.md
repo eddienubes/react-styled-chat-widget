@@ -37,7 +37,9 @@ this library uses styled-components to provide a nice development experience whe
 
 If you aren't using browserify/webpack, a UMD version of react-styled-chat-widget is available.
 This bundle is also what is loaded when installing from npm. It expects external React and ReactDOM.
+
 ---
+
 ### Exports
 
 The default export is `<ChatWidget/>`. There are additional types that you can use as well.

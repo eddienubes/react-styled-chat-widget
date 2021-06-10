@@ -1,3 +1,4 @@
+
 export type Corners = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
 
 export type Coordinates = { x: number, y: number };
@@ -15,7 +16,8 @@ export type Message = {
   isPrimary: boolean,
   message: string,
   date: Date | string,
-  sent: boolean
+  sent: boolean,
+  author: string
 }
 
 export type MessageSendHandler = (

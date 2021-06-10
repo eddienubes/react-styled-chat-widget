@@ -4,7 +4,6 @@ import visualizer from 'rollup-plugin-visualizer';
 import typescript from 'rollup-plugin-typescript2';
 import postcss from "rollup-plugin-postcss";
 import image from "@rollup/plugin-image";
-import dts from 'rollup-plugin-dts';
 
 export const plugins = [
   image(),

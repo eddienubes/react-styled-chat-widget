@@ -19,7 +19,7 @@ import {
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons";
-import {Message as IMessage, MessageSendHandler} from '../../types/chat';
+import {Message as IMessage, MessageSendHandler} from '../../types/chat.types';
 import Message from "../message";
 
 interface IProps {
@@ -32,7 +32,7 @@ interface IProps {
   onMessageSend?: MessageSendHandler
   messages: IMessage[],
   loading?: boolean,
-  setInitialChatPosition: () => void,
+  setInitialChatPosition: Function,
   height: number,
   spinner?: JSX.Element,
   placeholder?: string,
@@ -123,6 +123,7 @@ const ChatMainContent: FC<IProps> = (
             {
               messages.map(m => {
                 return <Message
+                  author={m.author}
                   sent={m.sent}
                   onMessageSend={onMessageSend}
                   key={m.id}
