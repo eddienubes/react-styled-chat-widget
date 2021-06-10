@@ -48,7 +48,7 @@ import {Message, MessageSendHandler, SendClickHandler} from "react-styled-chat-w
 
 ### Chat Widget usage
 
-You can take a look at the DEMO story-book I made. Don't forget to use fullscreen mode there, because component itself 
+You can take a look at the <a href="https://eddienubes.github.io/react-styled-chat-widget/?path=/story/app-test--app">DEMO</a> story-book I made. Don't forget to use fullscreen mode there or close other windows, because component itself 
 relies on the screen size a lot and storybook changes it in the runtime. 
 
 ```tsx
