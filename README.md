@@ -1,13 +1,14 @@
 # React styled chat widget
 
-------
+
+[![npm version](https://badge.fury.io/js/react-styled-chat-widget.svg)](https://badge.fury.io/js/react-styled-chat-widget)
 
 <p align="center">
     <img height="600" src="https://i.ibb.co/VB6fPKM/image.png" alt="image" border="0" />
 </p>
 
 Flexibly styled chat-widget for your react apps. It was mainly created for integration with chat-bot messengers.
-``
+
 ---
 
 #### Technical Documentation
