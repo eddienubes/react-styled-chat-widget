@@ -1,6 +1,6 @@
 {
   "name": "react-styled-chat-widget",
-  "version": "0.0.51",
+  "version": "1.0.1",
   "description": "Flexibly styled chat-widget for your react apps. It was mainly created for integration with chat-bot messengers.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -8,7 +8,8 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "keywords": [
     "react",
